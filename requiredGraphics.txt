@@ -1,0 +1,8 @@
+1. Main Menu UI (Play, Settings, Exit)
+2. Pause Menu UI (Reload, Home, Resume, Pause)
+3. Settings (Brightness, Sound, Music)
+4. Background (something cartonish and pleasant)
+5. Foreground (animals, garden, trees, flowers, ..environment(bridge, river, fountain)..)
+6. Letter (alphabets -> uppercase (lowercase milxa vane gardinu))
+
+**for now this should be fine** 
