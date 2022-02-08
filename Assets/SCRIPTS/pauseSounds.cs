@@ -23,7 +23,6 @@ public class pauseSounds : MonoBehaviour
 
     public void Click()
     {
-        if (button.interactable)
             sounds.Click();
     }
 }

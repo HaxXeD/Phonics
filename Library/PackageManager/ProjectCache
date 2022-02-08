@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637789429543693769
+      ticks: 637798843235272017
     m_Hash: 4100789433
   m_LockFileStatus:
     m_FilePath: D:/UnityGameDev/Phonics/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637789429543819202
+      ticks: 637798843235322012
     m_Hash: 1385258885
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -4291,4 +4291,4 @@ m_PackageAssets:
   m_LocalPackages:
     m_LocalFileStatus: []
 m_ProjectPath: D:/UnityGameDev/Phonics/Packages
-m_EditorVersion: 2020.3.26f1 (7298b473bc1a)
+m_EditorVersion: 2020.3.27f1 (e759542391ea)

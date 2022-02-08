@@ -1,6 +1,4 @@
-using System.Collections;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Chimpvine.WebClient;
@@ -24,7 +22,6 @@ public class timer : MonoBehaviour
     {
         return _time;
     }
-
 
     public void PauseTimer(bool time)
     {

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "014e6630-aab1-3363-abd9-b6692ec29be4": {
+      "ProjectGuid": "014e6630-aab1-3363-abd9-b6692ec29be4",
+      "DisplayName": "Assembly-CSharp",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "1a94e76c-6f72-d9ef-418c-14803dc1c3ad": {
+      "ProjectGuid": "1a94e76c-6f72-d9ef-418c-14803dc1c3ad",
+      "DisplayName": "Assembly-CSharp.Player",
+      "ColorIndex": 1
+    },
+    "0796836a-a40f-5ddf-f9cf-c59c8d4e1371": {
+      "ProjectGuid": "0796836a-a40f-5ddf-f9cf-c59c8d4e1371",
+      "DisplayName": "chimpvine.webclient",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

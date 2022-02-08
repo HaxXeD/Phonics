@@ -44,7 +44,7 @@ namespace Chimpvine.WebClient
                 Debug.Log(res);
                 apiURI = res["game_api_path"];
                 assetsPath = res["game_assets_api"];
-                //assetsPathInitialized(assetsPath);
+                assetsPathInitialized(assetsPath);
                 Init();
             }));
         }
@@ -173,7 +173,7 @@ namespace Chimpvine.WebClient
                 else 
                 {
                     JSONNode res = JSONNode.Parse(req.downloadHandler.text);
-                    //callback(res);
+                    callback(res);
                 }
             }
         }
