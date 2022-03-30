@@ -3,20 +3,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using Chimpvine.WebClient;
 using UnityEngine.SceneManagement;
-
-[RequireComponent(typeof(AudioSource))]
 public class timer : MonoBehaviour
 {
+    [SerializeField]Image Timer;
     public event Action OnTimerEnd;
-    [SerializeField] AudioClip _tick;
+
+    LevelController levelController;
     SettingButtons setting;
     ListAudio sound;
     Text text;
-    AudioSource audioSource;
-    float _timeRemaining = 31f;
+    float _timeRemaining = 61f;
+    float _timerFullTime;
     bool _timerIsRunning = false;
     int _time;
-    int _currentScene;
 
     public int returnTime()
     {
@@ -31,13 +30,13 @@ public class timer : MonoBehaviour
     private void Awake()
     {
         sound = FindObjectOfType<ListAudio>();
-        audioSource = GetComponent<AudioSource>();
         setting = FindObjectOfType<SettingButtons>();
-        _currentScene = SceneManager.GetActiveScene().buildIndex - 1; 
+        levelController = FindObjectOfType<LevelController>();
     }
     private void Start()
     {
-        
+        _timerFullTime = _timeRemaining;
+        Timer.fillAmount = 1;   
         text = GetComponent<Text>();
         // Starts the timer automatically
         _timerIsRunning = true;
@@ -49,6 +48,8 @@ public class timer : MonoBehaviour
         {
             if (_timeRemaining > 0)
             {                
+                Timer.fillAmount = (_timeRemaining/_timerFullTime);
+                print(Timer.fillAmount);
                 _time = (int)_timeRemaining;                
                 text.text = _time.ToString();
                               
@@ -57,17 +58,14 @@ public class timer : MonoBehaviour
                 int oldTime = (int)_timeRemaining;
                 if (_time - oldTime == 1)
                 {
-                    audioSource.PlayOneShot(_tick, 1f);
+                    // audioSource.PlayOneShot(_tick, 1f);
+                    sound.PlayOnce(35);
                 }
-                if (_timeRemaining < 11 && _timeRemaining > 6)
-                    text.color = Color.yellow;
-                else if (_timeRemaining < 6)
-                    text.color = Color.red;
             }
             else
             {
                 OnTimerEnd?.Invoke();
-                ChimpvineRestClient.SendGameUpdateRequest(_currentScene.ToString(),_time);
+                ChimpvineRestClient.SendGameUpdateRequest(levelController.ReturnCurrentScene().ToString(),0);
                 setting.ShowGameOverUI();
                 sound.PlaySound(34);
                 _timeRemaining = 0;

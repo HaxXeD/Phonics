@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SettingButtons : MonoBehaviour
@@ -18,7 +16,7 @@ public class SettingButtons : MonoBehaviour
 
     public void HideUI()
     {
-        settings.GetUI().SetActive(false);
+        settings.GetUI().GetComponent<SettingTween>().CloseSetting();
     }
 
     public void ShowPauseUI()
@@ -39,5 +37,20 @@ public class SettingButtons : MonoBehaviour
     public void HideGameOverUI()
     {
         settings.gameoverUI().SetActive(false);
+    }
+
+    public void ShowLevelEndUI(){
+        settings.levelEndUI().SetActive(true);
+    }
+
+    public void HideExcellentUI(){
+        settings.levelEndUI().SetActive(false);
+    }
+     public void ShowLevelStartUI(){
+        settings.levelStartUI().SetActive(true);
+    }
+
+    public void HideLevelStartUI(){
+        settings.levelStartUI().SetActive(false);
     }
 }

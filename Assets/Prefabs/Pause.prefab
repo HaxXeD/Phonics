@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 7857846245260163234}
   - component: {fileID: 7857846245260163235}
   - component: {fileID: 7857846245260163232}
-  - component: {fileID: -2260135095810848766}
   - component: {fileID: 6988378625484912740}
   m_Layer: 5
   m_Name: Pause
@@ -67,7 +66,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -96,7 +94,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -127,7 +124,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7857846245260163234}
-        m_TargetAssemblyTypeName: SettingButtons, Assembly-CSharp
         m_MethodName: ShowPauseUI
         m_Mode: 1
         m_Arguments:
@@ -139,7 +135,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7857846245260163232}
-        m_TargetAssemblyTypeName: pauseSounds, Assembly-CSharp
         m_MethodName: Click
         m_Mode: 1
         m_Arguments:
@@ -150,20 +145,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -2260135095810848766}
-        m_TargetAssemblyTypeName: Haxxed.DeactivateColliders, Assembly-CSharp
-        m_MethodName: DisableClicks
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 6988378625484912740}
-        m_TargetAssemblyTypeName: ChangeTimerStates, Assembly-CSharp
         m_MethodName: TimerState
         m_Mode: 6
         m_Arguments:
@@ -223,7 +205,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 7857846245260163232}
-          m_TargetAssemblyTypeName: pauseSounds, Assembly-CSharp
           m_MethodName: Hover
           m_Mode: 1
           m_Arguments:
@@ -244,18 +225,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc41e4812c44a0d45b071969e6b2a501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-2260135095810848766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8983546016290111138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 813739747be9aa14e9c7a450441f056e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6988378625484912740

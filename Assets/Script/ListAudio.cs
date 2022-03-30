@@ -7,6 +7,7 @@ public class ListAudio : MonoBehaviour
     [SerializeField] List<AudioClip> gameSounds = new List<AudioClip>();
     //[SerializeField] AudioSource carSound;
     AudioSource audioSource;
+    AudioClip _clip;
     // [SerializeField] int orderList = 1;
 
     private void Awake()
@@ -30,5 +31,11 @@ public class ListAudio : MonoBehaviour
     {
         audioSource.clip = gameSounds[27];
         audioSource.Play();
+    }
+
+    public void PlayOnce(int i){
+        _clip = gameSounds[i];
+        audioSource.clip = _clip;
+        audioSource.PlayOneShot(audioSource.clip);
     }
 }

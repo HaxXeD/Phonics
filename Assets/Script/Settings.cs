@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +6,9 @@ public class Settings : MonoBehaviour
     [SerializeField] GameObject SettingUI;
     [SerializeField] GameObject PauseUI;
     [SerializeField] GameObject GameOverUI;
+    [SerializeField] GameObject LevelEndUI;
+    [SerializeField] GameObject LevelStartUI;
+
     [SerializeField] Slider brightnessSlider;
     [SerializeField] Slider contrastSlider;
     [SerializeField] Slider saturationSlider;
@@ -46,6 +47,14 @@ public class Settings : MonoBehaviour
     public GameObject gameoverUI()
     {
         return GameOverUI;
+    }
+
+    public GameObject levelEndUI(){
+        return LevelEndUI;
+    }
+
+    public GameObject levelStartUI(){
+        return LevelStartUI;
     }
 
     public Slider GetBrightness()

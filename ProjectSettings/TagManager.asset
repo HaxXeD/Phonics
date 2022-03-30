@@ -7,6 +7,18 @@ TagManager:
   - box
   - timer
   - checker
+  - canvas
+  - letters
+  - counter
+  - apple
+  - water
+  - cloud
+  - camel
+  - house
+  - santa
+  - umbrella
+  - volleyball
+  - computer
   layers:
   - Default
   - TransparentFX
