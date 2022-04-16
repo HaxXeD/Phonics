@@ -36,7 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Checker.cs" />
+     <Compile Include="Assets\GetLevel.cs" />
      <Compile Include="Assets\LeanTween\Examples\Archived\OldGUIExamplesCS.cs" />
      <Compile Include="Assets\LeanTween\Examples\Archived\TestingPunch.cs" />
      <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
@@ -70,17 +70,23 @@
      <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
      <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
      <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
-     <Compile Include="Assets\LevelTween.cs" />
-     <Compile Include="Assets\Pronounce.cs" />
      <Compile Include="Assets\SCRIPTS\AudioPlayer.cs" />
      <Compile Include="Assets\SCRIPTS\ChangeTimerStates.cs" />
+     <Compile Include="Assets\SCRIPTS\Checker.cs" />
      <Compile Include="Assets\SCRIPTS\DeletePlayerPrefs.cs" />
+     <Compile Include="Assets\SCRIPTS\Dialogue.cs" />
      <Compile Include="Assets\SCRIPTS\LevelController.cs" />
      <Compile Include="Assets\SCRIPTS\LevelManager.cs" />
      <Compile Include="Assets\SCRIPTS\LevelSelector.cs" />
+     <Compile Include="Assets\SCRIPTS\LevelStateTween.cs" />
+     <Compile Include="Assets\SCRIPTS\LevelTween.cs" />
      <Compile Include="Assets\SCRIPTS\NewClickScript.cs" />
+     <Compile Include="Assets\SCRIPTS\Pronounce.cs" />
      <Compile Include="Assets\SCRIPTS\Scroller.cs" />
+     <Compile Include="Assets\SCRIPTS\SettingTween.cs" />
      <Compile Include="Assets\SCRIPTS\StartingLevel.cs" />
+     <Compile Include="Assets\SCRIPTS\TutorialClickScript.cs" />
+     <Compile Include="Assets\SCRIPTS\TutorialPopUps.cs" />
      <Compile Include="Assets\SCRIPTS\fillGradient.cs" />
      <Compile Include="Assets\SCRIPTS\gotoHome.cs" />
      <Compile Include="Assets\SCRIPTS\pauseSounds.cs" />
@@ -90,11 +96,9 @@
      <Compile Include="Assets\Script\ColorSettings.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\ListAudio.cs" />
-     <Compile Include="Assets\Script\NewBehaviourScript.cs" />
      <Compile Include="Assets\Script\SceneLoader.cs" />
      <Compile Include="Assets\Script\SettingButtons.cs" />
      <Compile Include="Assets\Script\Settings.cs" />
-     <Compile Include="Assets\SettingTween.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\LeanTween\ReadMe.txt" />
@@ -641,6 +645,12 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>D:\Unity\2019.4.35f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="chimpvine.webclient.editor">
+        <HintPath>D:\UnityGameDev\Phonics\Library\ScriptAssemblies\chimpvine.webclient.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="chimpvine.webclient">
+        <HintPath>D:\UnityGameDev\Phonics\Library\ScriptAssemblies\chimpvine.webclient.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
@@ -650,10 +660,6 @@
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
       <Project>{afb7b734-3c47-36b4-4f5d-a83c29c76b3d}</Project>
       <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="chimpvine.webclient.editor.csproj">
-      <Project>{132c4be9-3469-8ae9-4b2a-fd4913f8d03a}</Project>
-      <Name>chimpvine.webclient.editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
       <Project>{bed0f20c-1f20-dcad-c528-299d6a3e047f}</Project>
@@ -739,10 +745,6 @@
       <Project>{b2a27fef-db90-6781-03f8-f4d743cc42b2}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="chimpvine.webclient.csproj">
-      <Project>{6a839607-0fa4-df5d-f9cf-c59c8d4e1371}</Project>
-      <Name>chimpvine.webclient</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
       <Project>{32b12b1d-ca3f-4800-630d-e11f65be69a6}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
@@ -778,6 +780,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
       <Project>{9eced70f-a015-600c-26a3-546c191fb216}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Replica.Link.Editor.csproj">
+      <Project>{fc12463c-4506-3ac9-3c67-8fd3891be249}</Project>
+      <Name>Replica.Link.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{f34a3913-d2e0-c94c-1920-96e54b740bb1}</Project>

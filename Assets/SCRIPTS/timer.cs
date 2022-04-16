@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 using Chimpvine.WebClient;
-using UnityEngine.SceneManagement;
 public class timer : MonoBehaviour
 {
     [SerializeField]Image Timer;
@@ -11,7 +11,7 @@ public class timer : MonoBehaviour
     LevelController levelController;
     SettingButtons setting;
     ListAudio sound;
-    Text text;
+    TMP_Text text;
     float _timeRemaining = 61f;
     float _timerFullTime;
     bool _timerIsRunning = false;
@@ -37,7 +37,7 @@ public class timer : MonoBehaviour
     {
         _timerFullTime = _timeRemaining;
         Timer.fillAmount = 1;   
-        text = GetComponent<Text>();
+        text = GetComponent<TMP_Text>();
         // Starts the timer automatically
         _timerIsRunning = true;
     }
@@ -49,11 +49,11 @@ public class timer : MonoBehaviour
             if (_timeRemaining > 0)
             {                
                 Timer.fillAmount = (_timeRemaining/_timerFullTime);
-                print(Timer.fillAmount);
+                // print(Timer.fillAmount);
                 _time = (int)_timeRemaining;                
                 text.text = _time.ToString();
                               
-                print(_time);
+                // print(_time);
                 _timeRemaining -= Time.deltaTime;
                 int oldTime = (int)_timeRemaining;
                 if (_time - oldTime == 1)

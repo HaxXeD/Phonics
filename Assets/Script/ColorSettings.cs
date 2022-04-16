@@ -65,9 +65,19 @@ public class ColorSettings : MonoBehaviour
 
     private void Save()
     {
-        PlayerPrefs.SetFloat("Brightness", setting.postExposure.value);
-        PlayerPrefs.SetFloat("Saturation", setting.saturation.value);
-        PlayerPrefs.SetFloat("Contrast", setting.contrast.value);
+        try{
+            PlayerPrefs.SetFloat("Brightness", setting.postExposure.value);
+            PlayerPrefs.SetFloat("Saturation", setting.saturation.value);
+            PlayerPrefs.SetFloat("Contrast", setting.contrast.value);
+        }
+        catch{
+            
+        }
+
+    }
+
+    void OnDestroy(){
+        Save();
     }
 
 

@@ -632,6 +632,12 @@
  <Reference Include="Boo.Lang">
  <HintPath>D:/Unity/2019.4.35f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
+ <Reference Include="chimpvine.webclient.editor">
+ <HintPath>D:/UnityGameDev/Phonics/Library/ScriptAssemblies/chimpvine.webclient.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="chimpvine.webclient">
+ <HintPath>D:/UnityGameDev/Phonics/Library/ScriptAssemblies/chimpvine.webclient.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
@@ -653,10 +659,6 @@
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
       <Project>{34B7B7AF-473C-B436-4F5D-A83C29C76B3D}</Project>
       <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="chimpvine.webclient.editor.csproj">
-      <Project>{E94B2C13-6934-E98A-4B2A-FD4913F8D03A}</Project>
-      <Name>chimpvine.webclient.editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
       <Project>{0CF2D0BE-201F-ADDC-C528-299D6A3E047F}</Project>
@@ -742,10 +744,6 @@
       <Project>{EF7FA2B2-90DB-8167-03F8-F4D743CC42B2}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="chimpvine.webclient.csproj">
-      <Project>{0796836A-A40F-5DDF-F9CF-C59C8D4E1371}</Project>
-      <Name>chimpvine.webclient</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
       <Project>{1D2BB132-3FCA-0048-630D-E11F65BE69A6}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
@@ -781,6 +779,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
       <Project>{0FD7CE9E-15A0-0C60-26A3-546C191FB216}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Replica.Link.Editor.csproj">
+      <Project>{3C4612FC-0645-C93A-3C67-8FD3891BE249}</Project>
+      <Name>Replica.Link.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{13394AF3-E0D2-4CC9-1920-96E54B740BB1}</Project>

@@ -7,6 +7,12 @@
       "dependencies": {},
       "hash": "a2ab661aea968306a44b988bff35435b98ac3446"
     },
+    "com.replicastudios.link": {
+      "version": "file:replica-unity-link-v0.0.1.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "3.2.17",
       "depth": 0,

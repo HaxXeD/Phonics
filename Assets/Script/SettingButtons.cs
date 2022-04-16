@@ -26,7 +26,7 @@ public class SettingButtons : MonoBehaviour
 
     public void HidePauseUI()
     {
-        settings.pauseUI().SetActive(false);
+        settings.pauseUI().GetComponent<SettingTween>().CloseSetting();
     }
 
     public void ShowGameOverUI()
@@ -36,7 +36,7 @@ public class SettingButtons : MonoBehaviour
 
     public void HideGameOverUI()
     {
-        settings.gameoverUI().SetActive(false);
+        settings.gameoverUI().GetComponent<SettingTween>().CloseSetting();
     }
 
     public void ShowLevelEndUI(){
@@ -51,6 +51,6 @@ public class SettingButtons : MonoBehaviour
     }
 
     public void HideLevelStartUI(){
-        settings.levelStartUI().SetActive(false);
+        settings.levelStartUI().GetComponent<LevelStateTween>().CloseSetting();
     }
 }

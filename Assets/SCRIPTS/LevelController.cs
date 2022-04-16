@@ -7,6 +7,12 @@ public class LevelController : MonoBehaviour
 
     int _currentSceneIndex, _nextSceneIndex;
 
+    void Start(){
+        levelManager = FindObjectOfType<LevelManager>();
+        _currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        _nextSceneIndex = _currentSceneIndex+1;
+    }
+
     public int ReturnCurrentScene(){
         return _currentSceneIndex;
     }
@@ -14,12 +20,11 @@ public class LevelController : MonoBehaviour
     public int ReturnNextScene(){
         return _nextSceneIndex;
     }
-    private void Start()
+    public void FindSceneIndex()
     {
-        levelManager = FindObjectOfType<LevelManager>();
         _currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        print(_currentSceneIndex);
         _nextSceneIndex = _currentSceneIndex+1;
-        
     }
     public void ChangeScene(int sceneIndex)
     {
@@ -28,10 +33,12 @@ public class LevelController : MonoBehaviour
 
     public void ReloadScene()
     {
-        levelManager.LoadScene(_currentSceneIndex);
+        FindSceneIndex();
+        levelManager.LoadScene(_currentSceneIndex);   
     }
 
     public void NextScene(){
+        FindSceneIndex();
         levelManager.LoadScene(_nextSceneIndex);
     }
 }
